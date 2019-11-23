@@ -2,7 +2,7 @@
 
 * Usualy a data source offers information following a "template". This template is not always suited for the reasearch you are about to do. 
 That's why, sometimes analysts have to "transform" or "adapt" the source's data to a "closer" format, hence, creating an "abstraction layer" 
-which will decouple the source "presentation logic" from the "analytics logic" of your project. Such an aproach will increase the menanability and
+which will decouple the source "presentation logic" from the "analytics logic" of your project. Such an aproach will increase the menageability and
 flexibility of your project. Keep in mind that most of the times it's enough to adapt a single "data branch" from a data source in order to 
 be able to use all the data from that source (cause they follow the same template).
 

@@ -32,6 +32,8 @@ create a local version of this project on your local machine
 - create the child folder **modules/**
 
 
-
+V's questions regarding data dowload in csv format. 
+1. Data from date.gov.md is provided in xls formt. Some excel sheet have up to 12 tabs( data for each month). Do we save each tab individually in csv format or ther is a way to do it all at ones. 
+https://date.gov.md/ckan/ro/dataset/4733-imigranti-sositi-in-republica-moldova/resource/e8450ded-47e3-438d-bc85-2e3be96ba141
 
 

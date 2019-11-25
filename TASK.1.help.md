@@ -19,7 +19,7 @@ data = pd.read_excel('path/to/file.csv')
 * after that, the logic begomes less different
 
 * please create a python file called "excel_sample_reader.py" in the "test/" folder
-* download [this sample data]() to your "data/" folder
+* download [this sample data](./data/sample_1.xls) to your "data/" folder
 * and using the sample above, load the excel file into the "data variable"
 * if no errors till now continue
 ---

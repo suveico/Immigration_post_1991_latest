@@ -52,3 +52,20 @@ data = pd.read_excel('path/to/file.csv')
 5. print the maximum "change rate" and the YEAR it took place
 
  
+ ## Valentina's Comments on the tasks. 11/25
+ 
+ The first 2 tasks don't make much sense to me. 
+ In task 1 we created a bar chart that is difficult to read. It doesn't make sense plotting people and yers using "bars" format. I think more apropriate would've been to create a bar that would represent just "peopele" category overy the 3 years and not years and people. 
+ Please see the example in viber (I was not able to upload it in this workspace). 
+ 
+Next:
+
+In task 2 we have to change the "non-sense" graph into percentage. It drove me crazy because I don't see the logit and terefore I can't find the right solution on the web. Please provide som urls or tutoring that I can follow along. 
+ 
+Questions:
+Are these 5 tasks that you've assigned are the foundation of more complex code that we will use in our final data set? If so, I believe it would make more sense to work with the simplified version of the actual data. 
+I propose to work with the actual data set. This way I will star wrapping my mind arround the actual numbers and start seing the story and the paterns. 
+https://statbank.statistica.md/pxweb/pxweb/ro/20%20Populatia%20si%20procesele%20demografice/20%20Populatia%20si%20procesele%20demografice__POP__POP070/POP070300.px/?rxid=b2ff27d7-0b96-43c9-934b-42e1a2a9a774
+
+We can start with two first two colums, countries and 1993. 
+

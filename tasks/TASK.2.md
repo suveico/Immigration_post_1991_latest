@@ -42,6 +42,14 @@
       useful_data = useful_data.rename(columns=generateColumnNames())
       print( useful_data )
       ``` 
+
+      HINT:
+      ```python
+      dict = {}
+      for i in range(10):
+          dict[f"Unnamed: {i}"] = i
+      print(dict)    
+      ```
 6. Let's sort the values in an descending ( by default is ascending ) order - so we get the top immigrants destinations. 
    to sort multicolumn values, it's enough to put the list of the columns names which we want to be sorted by, the dataframe will do it's best to
    sort by all the values

@@ -1,4 +1,4 @@
-import numpy as np  # dependency for pandas
+import numpy as np  
 import pandas as pd
 import os
 
@@ -43,7 +43,6 @@ filename = f"{os.getcwd()}/data/real/top_10_2001.csv"
 useful_data.to_csv(filename)
 
 
-useful_data
 #####
 #Error Log
 # ROOT level of the project gives you access to all the folders inside

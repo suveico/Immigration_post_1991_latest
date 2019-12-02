@@ -1,7 +1,7 @@
 ## The task is to "mine" data from a datasource on real immigration DATA and to start processing it
 
 
-* The purpose of the task is to get the list of the top 10 countries where immigrants went to during the period of 2001-2010. We will use [this source](../data/real/imigr._scop_tara_2001-2010.xlsx), please take a look at it. After getting the list - we will save the results inside "data/real/top_10_2001_2010.csv"
+* The purpose of the task is to get the list of the top 10 countries where immigrants came from during the period of 2001-2010. We will use [this source](../data/real/imigr._scop_tara_2001-2010.xlsx), please take a look at it. After getting the list - we will save the results inside "data/real/top_10_2001_2010.csv"
 
 * please do all the work inside [this python file](../tests/panda.basics.real.data.2001_2010.top10.py) it has already the libraries imported. So just continue step by step following the steps presented bellow. In order for this to run you should RUN python at the level of the folder which contains the tasks/ and data/!
 

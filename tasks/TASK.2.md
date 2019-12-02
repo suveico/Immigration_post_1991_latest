@@ -70,3 +70,10 @@
    useful_data.to_csv(filename)
    ```   
  
+---
+
+BONUS!!! - does something change if you apply the sort like so: 
+```python
+useful_data = useful_data.replace('-',0).sort_values( ['2010','2009','2008',...,'2001'], ascending = False )
+```
+if YES - what changes ?

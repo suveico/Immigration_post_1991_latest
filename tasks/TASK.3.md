@@ -12,4 +12,6 @@
    - Try and pick a few other types of presentation in order to FOCUS more on some ASPECTS of the data you are researching?!
    
    HINT: for example, sometimes "Bars" diagram are a good choice when presenting "racing" values, or concurring values, but they work best in case the diagram is FIRST of all SORTED. 
-   
+
+6. While you focus on your story, try to identify the "spots" where we should dig more in order to put some data we don't see in the previous graphics, so we could create 2-3 more scripts in order to shine some light in it
+7. While presenting data, an analyst should become a little bit of "designer" meaning, take a look at the presented diagrams, and using terms like "alignment", "Font size", "Colors", "Caps & Figures" try to propose some changes that would make the diagrams look/be understood better 

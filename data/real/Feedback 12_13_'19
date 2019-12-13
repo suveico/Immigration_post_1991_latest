@@ -1,0 +1,31 @@
+
+Datafile 4. Immigration and Emigration 2014-2017
+
+
+
+1. Immigration over 2014-2017 Total for each year 
+Visual : 36 Time Series with Peaks 	
+
+2. Immigration Data by gender Men and Women 
+Visual 1 : 32 Pie chart - with percentage  for the total  (orange-women and blue-men colors), separate the men slice 
+Visual 2 : 22 Joy Plot - data by two genders over the years to find spikes
+or       : 44 Area Chart Unstack to show the fluctuation over the years 
+
+
+3. Emigration and Immigration 
+Visual l : 18 Slope Chart to highlight the difference between the two (spike highlight with red)
+or     : Categorical plot 30 
+Visual 2: calculate how much population we loosing and if the trend continues in 5 - 10 years what will be the population of MD
+
+
+4. Emigration and Immigration by gender total.
+Variables: 
+Emigration - men , women
+Immigration  - men, women 
+
+Visual: not sure,  but would prefer to avoid  using pie charts. 
+WILL UPDATE SOOON. It involves some mathematical calculations. 
+
+
+Other good visuals that can be considered 
+Bar Chart 34. Easy to ready and attention grabber due to spacing between bars, percentage, and colors 

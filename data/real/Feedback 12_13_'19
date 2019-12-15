@@ -23,9 +23,15 @@ Variables:
 Emigration - men , women
 Immigration  - men, women 
 
-Visual: not sure,  but would prefer to avoid  using pie charts. 
-WILL UPDATE SOOON. It involves some mathematical calculations. 
+Visual 1: 29 Population Pyramid by age and gender.
 
+5. Immigration  Growth Rate
+Visual : Any line chart/ time series would do. Or we can just used the numbers like here
+
+6. Excel Calculation 
+Data was taken from the same file, "Imigration and Emigratino 2014 -2017"
+Pls see the 4. Roadmap for more details and visualization 
 
 Other good visuals that can be considered 
 Bar Chart 34. Easy to ready and attention grabber due to spacing between bars, percentage, and colors 
+Prefer to avoid using pie charts because they are not good visuals

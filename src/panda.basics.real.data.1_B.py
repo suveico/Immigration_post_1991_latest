@@ -1,3 +1,13 @@
+import itertools
+from bokeh.palettes import Category20
+from bokeh.palettes import brewer
+from bokeh.core.properties import value
+from bokeh.plotting import figure, show, output_file
+from bokeh.layouts import gridplot
+import numpy as np
+from bokeh.models.tools import HoverTool
+from bokeh.models import ColumnDataSource
+from bokeh.plotting import figure, output_file, show
 import numpy as np  
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,35 +25,30 @@ df = pd.read_csv(filepath, index_col=0, sep=";",
                  skiprows=3, names=['nationality'] + colum_names)
 # FIX: we replace not numeric values with 0 - int so calculations could be done
 df = df.replace('-0',0).replace('-',0) 
-# print(df)
-# print(df.columns)
-
-
-
 
 # we convert the data set to int32 (which is enought precision for needed calculations)
-total_by_nationality_data = df.loc[:, colum_names].astype('int32').sum(axis=1).sort_values(0,ascending=False).head(20)
 nationality_top_10_by_year_data = df.loc[:, colum_names].astype('int32').sort_values(colum_names, ascending=False).head(10)
-# print( r )
-# print(df)
-print(total_by_nationality_data.index)
-print(nationality_top_10_by_year_data)
+# print(nationality_top_10_by_year_data)
 
 
 
 ############ PLOT & SAVE #########################
-total_by_nationality_data.plot(kind='bar', figsize=(15, 15))
-plt.savefig(filepath + "__1-A.png")
-plt.title("Total top 20 immigrants by nationality")
-plt.show()
 
-legend = []
+
+# legend = []
+
+
+
+output_file(filepath + "__1-B.html")
+# create a new plot with a datetime axis type
+p = figure(plot_width=1200, plot_height=700, x_axis_type="datetime")
+
+dates = np.array(nationality_top_10_by_year_data.columns, dtype=np.datetime64)
+
+x = 0
 for index, row in nationality_top_10_by_year_data.iterrows():
-    row.plot(kind='line', style='.-', figsize=(15, 15))
-    legend.append(index)
-plt.legend(legend)
-plt.title("Top 10 nationality immigrants by year")
-plt.savefig(filepath + "__1-B.png")
-plt.show()
+    p.line(dates,
+           row,  alpha=0.7, legend=index, line_width=3, color=Category20[10][x])
+    x+=1
 
-
+show(p)

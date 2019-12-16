@@ -64,7 +64,7 @@ data = pd.DataFrame({'Immigrants % of total': [
                 index=[f'Work {round(100*total_work_data/total_total_data)}%', f'Study {round(100*total_study_data/total_total_data)}%', f'Family {round(100*total_family_data/total_total_data)}%'])
 ############ PLOT & SAVE #########################
 data.plot(kind='pie', figsize=(7, 7), subplots=True)
-plt.savefig(filepath + "__1-A.png")
+plt.savefig(filepath + "__2-A.png")
 plt.title("Total immigrants by purpose")
 plt.show()
 

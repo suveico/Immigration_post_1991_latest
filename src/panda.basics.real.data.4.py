@@ -63,7 +63,7 @@ data = pd.DataFrame({'Immigrants % of total': [
                     index=[f'Men {round(100*total_immigr_men_data/total_immigr_total_data)}%', f'Women {round(100*total_immigr_women_data/total_immigr_total_data)}%'])
 ############ PLOT & SAVE #########################
 data.plot(kind='pie', figsize=(7, 7), subplots=True)
-plt.savefig(filepath + "__1-A.png")
+plt.savefig(filepath + "__4-A3.png")
 plt.title("Immigrants by gender")
 plt.show()
 ############ PREPARE  ############################
@@ -74,7 +74,7 @@ data = pd.DataFrame({'Emmigrants % of total': [
                     index=[f'Men {round(100*total_emmigr_men_data/total_emmigr_total_data)}%', f'Women {round(100*total_emmigr_women_data/total_emmigr_total_data)}%'])
 ############ PLOT & SAVE #########################
 data.plot(kind='pie', figsize=(7, 7), subplots=True)
-plt.savefig(filepath + "__1-B.png")
+plt.savefig(filepath + "__4-B3.png")
 plt.title("Emmigrants by gender")
 plt.show()
 

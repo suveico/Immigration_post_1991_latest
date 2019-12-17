@@ -1,3 +1,4 @@
+from bokeh.io import export_png
 from bokeh.io import curdoc, show
 from bokeh.palettes import Category20
 from bokeh.models.glyphs import HBar
@@ -72,3 +73,4 @@ plot1.add_layout(Grid(dimension=0, ticker=xaxis.ticker))
 
 
 show(gridplot([[plot1]]))
+export_png(plot1, filename=filepath + "__4-B.png")

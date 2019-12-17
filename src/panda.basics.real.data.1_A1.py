@@ -1,3 +1,4 @@
+from bokeh.io import export_png
 from bokeh.transform import cumsum
 from bokeh.plotting import figure
 from bokeh.palettes import Category20c
@@ -50,4 +51,4 @@ p.grid.grid_line_color = None
 show(p)
 
 
-
+export_png(p, filename=filepath + "__1-A1.png")

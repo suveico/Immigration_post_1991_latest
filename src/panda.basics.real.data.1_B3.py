@@ -1,18 +1,20 @@
 from bokeh.io import export_png
+from bokeh.io import export_svgs
 import itertools
 from bokeh.palettes import Category20
 from bokeh.palettes import brewer
 from bokeh.core.properties import value
 from bokeh.plotting import figure, show, output_file
-from bokeh.layouts import gridplot
+from bokeh.layouts import gridplot, column
 import numpy as np
 from bokeh.models.tools import HoverTool
-from bokeh.models import ColumnDataSource
+from bokeh.models import ColumnDataSource, Div
 from bokeh.plotting import figure, output_file, show
 import numpy as np  
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+import imgkit
 
 
 colum_names = [str(i) for i in range(1993, 2019, 1)]
@@ -39,20 +41,51 @@ nationality_top_10_by_year_data = df.loc[:, colum_names].astype('int32').sort_va
 # legend = []
 
 
+output_file(filepath + "__1-B3.html")
 
-output_file(filepath + "__1-B.html")
+
+
 # create a new plot with a datetime axis type
-p = figure(plot_width=1200, plot_height=700, x_axis_type="datetime")
+plots1 = []
+plots2 = []
+
+lo_percent = 0
+hi_percent = 0
+
+
+
 
 dates = np.array(nationality_top_10_by_year_data.columns, dtype=np.datetime64)
-
 x = 0
+
 for index, row in nationality_top_10_by_year_data.iterrows():
+    # total for each year
+    for year in row.index:
+        total = nationality_top_10_by_year_data[year].sum()
+        row[year] = row[year] * 100 / total
+
+    hi_percent += max(row) 
+    lo_percent += min(row) 
+    
+    
+    p = figure(plot_width=320, plot_height=280, x_axis_type="datetime")
+    p.y_range.end = 100
     p.line(dates,
-           row,  alpha=0.7, legend=index, line_width=3, color=Category20[10][x])
-    x+=1
+           row,  alpha=0.7, legend=index, line_width=2,color="green")
 
-show(p)
+    p.circle(dates, row, size=5)
+    plots1.append(p) if x >= 5 else plots2.append(p)
+    x += 1
 
+hi_percent /= 10
+lo_percent /= 10
 
-export_png(p, filename=filepath + "__1-B.png")
+g = gridplot([plots1,plots2])
+show(column(
+    Div(text="<h2>Immigration by top 10 nationalities<br/>in % relative to the total immigrants for EACH YEAR<br>period [1993-2018]</h2>"),
+    Div(text=f"<h4 style='color:red'>interesting fact: the average lo/hi is {round(lo_percent)}..{round(hi_percent)}% </h4>"),
+    g
+))
+
+export_png(g, filename=filepath + "__1-B3.png")
+

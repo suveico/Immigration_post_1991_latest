@@ -1,3 +1,4 @@
+from bokeh.io import export_png
 from bokeh.transform import cumsum
 from bokeh.plotting import figure
 from bokeh.palettes import Category20c
@@ -56,7 +57,7 @@ data['color'] = Category20c[len(x)]
 p = figure(plot_height=350, title='Immigrants % of total [1993-2010]', toolbar_location=None,
            tools="hover", tooltips="@country: @value", x_range=(-0.5, 1.0))
 
-p.wedge(x=0, y=1, radius=0.5,
+p.wedge(x=0, y=1, radius=0.4,
         start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
         line_color="white", fill_color='color', legend_field='country', source=data)
 
@@ -65,3 +66,5 @@ p.axis.visible = False
 p.grid.grid_line_color = None
 
 show(p)
+
+export_png(p, filename=filepath + "__2-A1.png")
